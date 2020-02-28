@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+//Components
+import MainComponent from '../src/components/MainComponent'
+import MedicationsListComponent from '../src/components/MedicationsListComponent'
+import NavBarComponent from '../src/components/NavBarComponent'
+import ProcedureListComponent from '../src/components/ProcedureListComponent'
+import TeamListComponent from '../src/components/TeamListComponent'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div>
+        <NavBarComponent/>
+        <Route path="/" exact component={MainComponent}/>
+        <Route path="/team" component={TeamListComponent}/>
+        <Route path="/procedures" component={ProcedureListComponent}/>
+        <Route path="/meds" component={MedicationsListComponent}/>
+      </div>
+      
+    </Router>
   );
 }
 
