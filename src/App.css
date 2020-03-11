@@ -1,7 +1,24 @@
-*{
-    font-family: 'Press Start 2P', cursive;  
+.mainContainer{
+    /* background-color: #E4E4E4; */
+    /* font-family: 'Press Start 2P', cursive;  */
+    /* font-family: 'Spartan'; */
+    background: rgb(48,77,107);
+    background: radial-gradient(circle, rgba(48,77,107,0.5382528011204482) 79%, rgba(31,45,74,1) 98%);
+    font-family: Varela Round;
 }
 
-.mainComponent{
-    display: flex;
+.navBarBackground{
+    background-color: #1B1B1B;
 }
+
+.secondNavBarBackground{
+    background-color: #444;
+}
+
+.footerBackGround{
+    background-color: #F1684E
+}
+
+
+
+

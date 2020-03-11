@@ -4,7 +4,7 @@ class MainClockComponent extends Component {
     state = {  }
     render() { 
         return (
-            <p>00:00:00</p>
+            <p className="text-primary">00:00:00</p>
         );
     }
 }

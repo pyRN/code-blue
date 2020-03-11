@@ -4,26 +4,31 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 //Components
+import FooterComponent from '../src/components/FooterComponent'
 import MainComponent from '../src/components/MainComponent'
 import MedicationsListComponent from '../src/components/MedicationsListComponent'
 import NavBarComponent from '../src/components/NavBarComponent'
 import ProcedureListComponent from '../src/components/ProcedureListComponent'
+import ReferenceComponent from '../src/components/ReferenceComponent'
+import SecondNavBar from '../src/components/SecondNavBar'
 import TeamListComponent from '../src/components/TeamListComponent'
 
 
 
 function App() {
   return (
-    <Router>
-      <div>
+    <div className="mainContainer">      
+      <Router>      
         <NavBarComponent/>
+        <SecondNavBar/>
         <Route path="/" exact component={MainComponent}/>
         <Route path="/team" component={TeamListComponent}/>
         <Route path="/procedures" component={ProcedureListComponent}/>
         <Route path="/meds" component={MedicationsListComponent}/>
-      </div>
-      
-    </Router>
+        <Route path="/reference" component={ReferenceComponent}/>
+        <FooterComponent/>
+      </Router>
+    </div>
   );
 }
 

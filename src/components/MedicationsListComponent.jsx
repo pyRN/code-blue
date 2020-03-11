@@ -4,7 +4,7 @@ class MedicationsListComponent extends Component {
     state = {  }
     render() { 
         return (  
-            <div>
+            <div className="m-5">
                 <h2>Medications List Component
                 </h2>
             </div>
