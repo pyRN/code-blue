@@ -19,8 +19,11 @@ function App() {
   return (
     <div className="mainContainer">      
       <Router>      
-        <NavBarComponent/>
-        <SecondNavBar/>
+        <div className="static-top sticky-top">
+          <NavBarComponent/>
+          <SecondNavBar/>
+        </div>
+        
         <Route path="/" exact component={MainComponent}/>
         <Route path="/team" component={TeamListComponent}/>
         <Route path="/procedures" component={ProcedureListComponent}/>
