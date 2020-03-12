@@ -5,16 +5,31 @@ class TeamListComponent extends Component {
     render() { 
         return ( 
             <div className="m-5">
-                <div>
-                    <h2>Team Members</h2>
-                    <input placeholder="Team Member"></input>
-                    <input placeholder="Title"></input>
-                    <input placeholder="Department"></input>
-                    <input placeholder="Arrived" type="time"></input>
-                    <button>Add</button>
+                <div className="table">
+                    <div class="input-group">
+                        <input type="text" placeholder="Name" class="form-control"/>
+                        <select class="custom-select" id="inputGroupSelect02">
+                            <option selected>Title</option>
+                            <option value="1">MD</option>
+                            <option value="2">RN</option>
+                            <option value="3">RT</option>
+                            <option value="4">Tech</option>
+                            <option value="5">EKG</option>
+                            <option value="6">Rad Tech</option>
+                        </select>
+                        <select class="custom-select" id="inputGroupSelect02">
+                            <option selected>Department</option>
+                            <option value="1">ED</option>
+                            <option value="2">Surgery</option>
+                            <option value="3">Trauma</option>
+                            <option value="4">ICU</option>
+                            <option value="5">Radiology</option>
+                        </select>
+                        <input type="time" class="form-control"/>
+                    </div>
                 </div>
                 <div>
-                    <table className="table-dark table-striped">
+                    <table className="table table-dark table-striped">
                         <thead>
                             <tr>
                                 <th>Name</th>
