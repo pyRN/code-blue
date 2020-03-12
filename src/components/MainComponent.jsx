@@ -11,11 +11,11 @@ class MainComponent extends Component {
         return ( 
             <div className="m-4">
                 <div className="row">   
-                    <div class="col-sm card m-1 p-4 border border-dark bg-dark rounded">
-                        <div class="card-header bg-secondary">
-                            <h5 class="m-auto">CPR</h5>
+                    <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
+                        <div className="card-header bg-secondary">
+                            <h5 className="m-auto">CPR</h5>
                         </div>
-                        <div class="card-body">
+                        <div className="card-body">
                             <div className="row">
                                 <div className="col-sm">
                                     <button className="text-Primary btn bg-dark btn-outline-primary btn-block m-1">Start</button>
@@ -37,11 +37,11 @@ class MainComponent extends Component {
                             </div>                         
                         </div>                        
                     </div>
-                    <div class="col-sm card m-1 p-4 border border-dark bg-dark rounded">
-                        <div class="card-header bg-secondary">
-                            <h5 class="m-auto">Rhythm</h5>
+                    <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
+                        <div className="card-header bg-secondary">
+                            <h5 className="m-auto">Rhythm</h5>
                         </div>
-                        <div class="card-body">
+                        <div className="card-body">
                             <div className="row">
                                 <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Asystole</button>
                                 <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Pulseless V-Tach</button>
@@ -68,13 +68,13 @@ class MainComponent extends Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div class="col-sm card m-1 p-4 border border-dark bg-dark rounded">
-                                <div class="card-header bg-secondary">
-                                    <h5 class="m-auto">Defibrillate</h5>
+                    <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
+                                <div className="card-header bg-secondary">
+                                    <h5 className="m-auto">Defibrillate</h5>
                                 </div>
-                                <div class="card-body">
-                                    <div class="input-group border-dark rounded mb-2">
-                                        <select class="custom-select" id="joulesGroup">
+                                <div className="card-body">
+                                    <div className="input-group border-dark rounded mb-2">
+                                        <select className="custom-select" id="joulesGroup">
                                             <option selected>Joules</option>
                                             <option value="1">1-10</option>
                                             <option value="2">15</option>
@@ -88,17 +88,17 @@ class MainComponent extends Component {
                                             <option value="10">170</option>
                                             <option value="11">200</option>
                                         </select>
-                                        <div class="input-group-append">
-                                            <button class="text-Primary bg-dark btn btn-outline-primary btn-block" for="joulesGroup">Shock</button>
+                                        <div className="input-group-append">
+                                            <button className="text-Primary bg-dark btn btn-outline-primary btn-block" for="joulesGroup">Shock</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                    <div class="col-sm card m-1 p-4 border border-dark bg-dark rounded">
-                                <div class="card-header bg-secondary">
-                                    <h5 class="m-auto">Notes</h5>
+                    <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
+                                <div className="card-header bg-secondary">
+                                    <h5 className="m-auto">Notes</h5>
                                 </div>
-                                <div class="card-body">
+                                <div className="card-body">
                                     <div className="input-group border-dark rounded mb-2">
                                         <input type="text" className="form-control border-primary"></input>
                                         <div className="input-group-append">
@@ -109,11 +109,11 @@ class MainComponent extends Component {
                             </div>
                 </div>
                 <div className="row">
-                    <div class="col-sm card m-1 p-4 border border-dark bg-dark rounded">
-                        <div class="card-header bg-secondary">
-                            <h5 class="m-auto">Emergency Medications</h5>
+                    <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
+                        <div className="card-header bg-secondary">
+                            <h5 className="m-auto">Emergency Medications</h5>
                         </div>
-                        <div class="row card-body">
+                        <div className="row card-body">
                             <div className="col-sm">
                                 <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Epinepherine</button>
                                 <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Amiodarone</button>
@@ -128,11 +128,11 @@ class MainComponent extends Component {
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm card m-1 p-4 border border-dark bg-dark rounded">
-                        <div class="card-header bg-secondary">
-                            <h5 class="m-auto">Emergency Procedures</h5>
+                    <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
+                        <div className="card-header bg-secondary">
+                            <h5 className="m-auto">Emergency Procedures</h5>
                         </div>
-                        <div class="card-body">
+                        <div className="card-body">
                             <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Intubate</button>
                             <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">I.V. Access</button>
                             <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Central Line</button>
@@ -140,21 +140,21 @@ class MainComponent extends Component {
                             <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Chest Tube</button>
                         </div>
                     </div>   
-                    <div class="col-sm card m-1 p-4 border border-dark bg-dark rounded">
-                        <div class="card-header bg-secondary">
-                            <h5 class="m-auto">Vitals</h5>
+                    <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
+                        <div className="card-header bg-secondary">
+                            <h5 className="m-auto">Vitals</h5>
                         </div>
-                        <div class="card-body">
+                        <div className="card-body">
                             <VitalComponent/>                            
                         </div>
                     </div>
                 </div>               
                 <div className="row">
-                    <div class="col-lg card m-1 p-4 border border-dark bg-dark rounded">
-                        <div class="card-header bg-secondary">
-                            <h5 class="m-auto">Log</h5>
+                    <div className="col-lg card m-1 p-4 border border-dark bg-dark rounded">
+                        <div className="card-header bg-secondary">
+                            <h5 className="m-auto">Log</h5>
                         </div>
-                        <div class="card-body">
+                        <div className="card-body">
                             <table className="table table-dark table-striped">
                                 <tbody>
                                     <tr>

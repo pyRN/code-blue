@@ -1,35 +1,33 @@
 import React, { Component } from 'react'
 
 class ProcedureListComponent extends Component {
-    state = {  }
+    state = { 
+        procedures: [
+            "Arterial Line",
+            "Central Line",
+            "Chest Tube",
+            "EKG",
+            "Intubation", 
+            "I.V. Access",
+            "X-Ray"
+        ]
+    }
     render() { 
         return (  
             <div className="m-5">
-                <h2>Procedures</h2>
-                <input placeholder="Search"></input>
-                <button>Search</button>
-                <table className="table-dark table-striped">
-                    <thead>
-                        <tr>
-                            <th>Procedures</th>
-                        </tr>
-                    </thead>
+                <div class="input-group mb-3">
+                    <input type="text" className="form-control border-primary" placeholder="Search Procedures" aria-label="Search Procedures"/>
+                    <div class="input-group-append">
+                        <button className="text-Primary bg-dark btn btn-outline-primary btn-block" id="basic-addon2">Search</button>
+                    </div>
+                </div>
+                <table className="table table-dark table-striped">
                     <tbody>
-                        <tr>
-                            <td>Intubation</td>
-                        </tr>
-                        <tr>
-                            <td>I.V. Access</td>
-                        </tr>
-                        <tr>
-                            <td>Central Line Access</td>
-                        </tr>
-                        <tr>
-                            <td>X-Ray</td>
-                        </tr>
-                        <tr>
-                            <td>CT</td>
-                        </tr>
+                        {this.state.procedures.map((item) =>
+                            <tr>
+                                <td>{item}</td>
+                            </tr>
+                        )} 
                     </tbody>
                 </table>
             </div>

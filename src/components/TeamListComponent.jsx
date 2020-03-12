@@ -6,9 +6,9 @@ class TeamListComponent extends Component {
         return ( 
             <div className="m-5">
                 <div className="table">
-                    <div class="input-group">
-                        <input type="text" placeholder="Name" class="form-control"/>
-                        <select class="custom-select" id="inputGroupSelect02">
+                    <div className="input-group">
+                        <input type="text" placeholder="Name" className="form-control"/>
+                        <select className="custom-select" id="inputGroupSelect02">
                             <option selected>Title</option>
                             <option value="1">MD</option>
                             <option value="2">RN</option>
@@ -17,7 +17,7 @@ class TeamListComponent extends Component {
                             <option value="5">EKG</option>
                             <option value="6">Rad Tech</option>
                         </select>
-                        <select class="custom-select" id="inputGroupSelect02">
+                        <select className="custom-select" id="inputGroupSelect02">
                             <option selected>Department</option>
                             <option value="1">ED</option>
                             <option value="2">Surgery</option>
@@ -25,7 +25,10 @@ class TeamListComponent extends Component {
                             <option value="4">ICU</option>
                             <option value="5">Radiology</option>
                         </select>
-                        <input type="time" class="form-control"/>
+                        <input type="time" className="form-control"/>
+                        <div class="input-group-append">
+                            <button className="text-Primary bg-dark btn btn-outline-primary btn-block" id="basic-addon2">Now</button>
+                        </div>
                     </div>
                 </div>
                 <div>
