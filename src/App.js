@@ -23,7 +23,6 @@ function App() {
           <NavBarComponent/>
           <SecondNavBar/>
         </div>
-        
         <Route path="/" exact component={MainComponent}/>
         <Route path="/team" component={TeamListComponent}/>
         <Route path="/procedures" component={ProcedureListComponent}/>
