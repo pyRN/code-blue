@@ -10,7 +10,7 @@ class MainComponent extends Component {
     render() { 
         return ( 
             <div className="m-4">
-                <div className="row">                    
+                <div className="row">   
                     <div class="col-sm card m-1 p-4 border border-dark bg-dark rounded">
                         <div class="card-header bg-secondary">
                             <h5 class="m-auto">CPR</h5>
@@ -23,55 +23,90 @@ class MainComponent extends Component {
                                 <div className="col-sm">
                                     <button className="text-Primary btn bg-dark btn-outline-primary btn-block m-1">Stop</button>
                                 </div>
-                            </div>
-                            
-                        </div>
+                                <div className="col-sm">
+                                    <button className="text-Primary btn bg-dark btn-outline-primary btn-block m-1">Pulse Check</button>
+                                </div>
+                            </div>      
+                            <div className="row">
+                                <div className="col-sm">
+                                    <button className="text-Primary btn bg-dark btn-outline-primary btn-block m-1">R.O.S.C</button>
+                                </div>
+                                <div className="col-sm">
+                                    <button className="text-Primary btn bg-dark btn-outline-primary btn-block m-1">T.O.D</button>
+                                </div>
+                            </div>                         
+                        </div>                        
                     </div>
                     <div class="col-sm card m-1 p-4 border border-dark bg-dark rounded">
                         <div class="card-header bg-secondary">
-                            <h5 class="m-auto">Defibrillate</h5>
+                            <h5 class="m-auto">Rhythm</h5>
                         </div>
                         <div class="card-body">
-                            {/* <div className="input-group border-dark rounded mb-3">
-                                <input type="text" className="form-control border-primary"></input>
-                                <div className="input-group-append border-dark">
-                                    <button className="input-group-text text-primary btn bg-dark border-primary btn-outline-primary btn-lg">Shock</button>
-                                </div>
-                            </div> */}
-                            <div class="input-group border-dark rounded mb-3">
-                                <select class="custom-select" id="joulesGroup">
-                                    <option selected>Joules</option>
-                                    <option value="1">1-10</option>
-                                    <option value="2">15</option>
-                                    <option value="3">20</option>
-                                    <option value="4">30</option>
-                                    <option value="5">50</option>
-                                    <option value="6">70</option>
-                                    <option value="7">100</option>
-                                    <option value="8">120</option>
-                                    <option value="9">150</option>
-                                    <option value="10">170</option>
-                                    <option value="11">200</option>
-                                </select>
-                                <div class="input-group-append">
-                                    <button class="text-Primary bg-dark btn btn-outline-primary btn-block" for="joulesGroup">Shock</button>
-                                </div>
+                            <div className="row">
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Asystole</button>
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Pulseless V-Tach</button>
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">V-Fib</button>
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">PEA</button>
                             </div>
-                        </div>
+                            <div className="row">
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">1st&#176; AV Block</button>
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">2nd&#176; AV Block Type-1</button>
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">2nd&#176; AV Block Type-2</button>
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Complete Heart Block</button>
+                            </div>
+                            <div className="row">
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">SVT</button>
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">A-Flutter</button>
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">A-Fib</button>
+                            </div>
+                            <div className="row">
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Mono V-Tach</button>
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Poly V-Tach</button>
+                                <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Torsades</button>
+                            </div>
+                        </div>                        
                     </div>
+                </div>
+                <div className="row">
                     <div class="col-sm card m-1 p-4 border border-dark bg-dark rounded">
-                        <div class="card-header bg-secondary">
-                            <h5 class="m-auto">Notes</h5>
-                        </div>
-                        <div class="card-body">
-                            <div className="input-group border-dark rounded mb-3">
-                                <input type="text" className="form-control border-primary"></input>
-                                <div className="input-group-append">
-                                    <button className="text-Primary bg-dark btn btn-outline-primary btn-block">Add </button>
+                                <div class="card-header bg-secondary">
+                                    <h5 class="m-auto">Defibrillate</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="input-group border-dark rounded mb-2">
+                                        <select class="custom-select" id="joulesGroup">
+                                            <option selected>Joules</option>
+                                            <option value="1">1-10</option>
+                                            <option value="2">15</option>
+                                            <option value="3">20</option>
+                                            <option value="4">30</option>
+                                            <option value="5">50</option>
+                                            <option value="6">70</option>
+                                            <option value="7">100</option>
+                                            <option value="8">120</option>
+                                            <option value="9">150</option>
+                                            <option value="10">170</option>
+                                            <option value="11">200</option>
+                                        </select>
+                                        <div class="input-group-append">
+                                            <button class="text-Primary bg-dark btn btn-outline-primary btn-block" for="joulesGroup">Shock</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
+                    <div class="col-sm card m-1 p-4 border border-dark bg-dark rounded">
+                                <div class="card-header bg-secondary">
+                                    <h5 class="m-auto">Notes</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div className="input-group border-dark rounded mb-2">
+                                        <input type="text" className="form-control border-primary"></input>
+                                        <div className="input-group-append">
+                                            <button className="text-Primary bg-dark btn btn-outline-primary btn-block">Add </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                 </div>
                 <div className="row">
                     <div class="col-sm card m-1 p-4 border border-dark bg-dark rounded">
