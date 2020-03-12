@@ -21,6 +21,9 @@ class NavBarComponent extends Component {
                                 <Link className="nav-link text-primary" to="/">Main</Link>
                             </li>
                             <li className="nav-item">
+                                <Link className="nav-link text-primary" to="/log">Log</Link>
+                            </li>
+                            <li className="nav-item">
                                 <Link className="nav-link text-primary" to="/team">Team</Link>
                             </li>
                             <li className="nav-item">

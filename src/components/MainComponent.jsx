@@ -5,7 +5,6 @@ import CprComponent from './subcomponents/CprComponent'
 import DefibrillateComponent from './subcomponents/DefibrillateComponent'
 import EmergencyMedsComponent from './subcomponents/EmergencyMedsComponent'
 import EmergencyProcComponent from './subcomponents/EmergencyProcComponent'
-import LogComponent from './subcomponents/LogComponent'
 import NotesComponent from './subcomponents/NotesComponent'
 import RhythmComponent from './subcomponents/RhythmComponent'
 import VitalsComponent from './subcomponents/VitalsComponent'
@@ -29,10 +28,7 @@ class MainComponent extends Component {
                     <EmergencyMedsComponent/>
                     <EmergencyProcComponent/>   
                     <VitalsComponent/>
-                </div>               
-                <div className="row">
-                    <LogComponent/>
-                </div>
+                </div>  
             </div>
         );
     }
