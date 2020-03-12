@@ -1,12 +1,8 @@
 import React, { Component } from 'react'
-// import EpiClockComponent from './EpiClockComponent'
 import VitalComponent from './VitalComponent'
-// import borderImage from '../media/heart_ekg_logo.svg'
 
 class MainComponent extends Component {
-    state = { 
-        vitals: ["HR", "BP", "Res", "Temp", "MAP", "Sp02", "CO2"]
-    }
+    state = { }
     render() { 
         return ( 
             <div className="m-4">
