@@ -18,7 +18,7 @@ class MedicationsListComponent extends Component {
                 <div class="input-group mb-3">
                     <input type="text" className="form-control border-primary" placeholder="Search Medications" aria-label="Search Procedures"/>
                     <div class="input-group-append">
-                        <button className="text-Primary bg-dark btn btn-outline-primary btn-block" id="basic-addon2">Search</button>
+                        <button className="text-primary btn btn-background btn-background-hover" id="basic-addon2">Search</button>
                     </div>
                 </div>
                 <table className="table table-dark table-striped">

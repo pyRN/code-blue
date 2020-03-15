@@ -11,21 +11,21 @@ class CprComponent extends Component {
                 <div className="card-body">
                     <div className="row">
                         <div className="col-sm">
-                            <button className="text-Primary btn bg-dark btn-outline-primary btn-block m-1">Start</button>
+                            <button className="text-Primary btn btn-success btn-outline-dark btn-block m-1 start-stop-btn-hover">Start</button>
                         </div>
                         <div className="col-sm">
-                            <button className="text-Primary btn bg-dark btn-outline-primary btn-block m-1">Stop</button>
+                            <button className="text-Primary btn btn-danger btn-outline-dark btn-block m-1 start-stop-btn-hover">Stop</button>
                         </div>
                         <div className="col-sm">
-                            <button className="text-Primary btn bg-dark btn-outline-primary btn-block m-1">Pulse Check</button>
+                            <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">Pulse Check</button>
                         </div>
                     </div>      
                     <div className="row">
                         <div className="col-sm">
-                            <button className="text-Primary btn bg-dark btn-outline-primary btn-block m-1">R.O.S.C</button>
+                            <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">R.O.S.C</button>
                         </div>
                         <div className="col-sm">
-                            <button className="text-Primary btn bg-dark btn-outline-primary btn-block m-1">T.O.D</button>
+                            <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">T.O.D</button>
                         </div>
                     </div>                         
                 </div>                        

@@ -10,26 +10,26 @@ class RhythmComponent extends Component {
                 </div>
                 <div className="card-body">
                     <div className="row">
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Asystole</button>
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Pulseless V-Tach</button>
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">V-Fib</button>
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">PEA</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">Asystole</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">Pulseless V-Tach</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">V-Fib</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">PEA</button>
                     </div>
                     <div className="row">
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">1st&#176; AV Block</button>
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">2nd&#176; AV Block Type-1</button>
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">2nd&#176; AV Block Type-2</button>
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Complete Heart Block</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">1st&#176; AV Block</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">2nd&#176; AV Block Type-1</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">2nd&#176; AV Block Type-2</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">Complete Heart Block</button>
                     </div>
                     <div className="row">
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">SVT</button>
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">A-Flutter</button>
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">A-Fib</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">SVT</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">A-Flutter</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">A-Fib</button>
                     </div>
                     <div className="row">
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Mono V-Tach</button>
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Poly V-Tach</button>
-                        <button className="col-sm text-Primary btn bg-dark btn-outline-primary btn-block m-1">Torsades</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">Mono V-Tach</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">Poly V-Tach</button>
+                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">Torsades</button>
                     </div>
                 </div>                        
             </div>

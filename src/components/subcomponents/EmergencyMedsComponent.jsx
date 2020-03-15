@@ -10,16 +10,16 @@ class EmergencyMedsComponent extends Component {
                 </div>
                 <div className="row card-body">
                     <div className="col-sm">
-                        <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Epinepherine</button>
-                        <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Amiodarone</button>
-                        <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Narcan</button>
-                        <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Atropine</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">Epinepherine</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">Amiodarone</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">Narcan</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">Atropine</button>
                     </div>
                     <div className="col-sm">
-                        <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Sodium Bicarbonate</button>
-                        <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Calcium Chloride</button>
-                        <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Dextrose 50%</button>
-                        <button className="text-Primary bg-dark btn btn-outline-primary btn-block m-1">Lidocaine</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">Sodium Bicarbonate</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">Calcium Chloride</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">Dextrose 50%</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">Lidocaine</button>
                     </div>
                 </div>
             </div>

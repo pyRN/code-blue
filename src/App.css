@@ -19,6 +19,14 @@
     background-color: #F1684E
 }
 
+.start-stop-btn-hover:hover, .btn-background:hover, .warning-btn-hover:hover{
+    background-color: blue !important;
+}
+
+.btn-background{
+    background-color: black !important;
+}
+
 
 
 

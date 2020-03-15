@@ -12,7 +12,7 @@ class NotesComponent extends Component {
                     <div className="input-group border-dark rounded mb-2">
                         <input type="text" className="form-control border-primary"></input>
                         <div className="input-group-append">
-                            <button className="text-Primary bg-dark btn btn-outline-primary btn-block">Add </button>
+                            <button className="text-primary btn btn-background btn-background-hover">Add </button>
                         </div>
                     </div>
                 </div>
