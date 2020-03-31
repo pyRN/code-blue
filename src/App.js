@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect  } from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -15,8 +15,7 @@ import SecondNavBar from './components/subcomponents/SecondNavBar'
 import TeamListComponent from '../src/components/TeamListComponent'
 
 
-
-function App() {
+const App = () => {
   return (
     <div className="mainContainer">      
       <Router>      

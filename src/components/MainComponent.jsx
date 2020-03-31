@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect  } from 'react'
 
 //Components
 import CprComponent from './subcomponents/CprComponent'
@@ -10,28 +10,26 @@ import RhythmComponent from './subcomponents/RhythmComponent'
 import VitalsComponent from './subcomponents/VitalsComponent'
 
 
+const MainComponent = () => {
+    const [cprTimer, setCprTimer] = useState();
 
-class MainComponent extends Component {
-    state = { }
-    render() { 
-        return ( 
-            <div className="m-4">
-                <div className="row">   
-                    <CprComponent/>
-                    <RhythmComponent/>
-                </div>
-                <div className="row">
-                    <DefibrillateComponent/>
-                    <NotesComponent/>                    
-                </div>
-                <div className="row">
-                    <EmergencyMedsComponent/>
-                    <EmergencyProcComponent/>   
-                    <VitalsComponent/>
-                </div>  
+    return ( 
+        <div className="m-4">
+            <div className="row">   
+                <CprComponent/>
+                <RhythmComponent/>
             </div>
-        );
-    }
+            <div className="row">
+                <DefibrillateComponent/>
+                <NotesComponent/>                    
+            </div>
+            <div className="row">
+                <EmergencyMedsComponent/>
+                <EmergencyProcComponent/>   
+                <VitalsComponent/>
+            </div>  
+        </div>
+    );
 }
 
 export default MainComponent;

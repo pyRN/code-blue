@@ -25,7 +25,7 @@ class DefibrillateComponent extends Component {
                             <option value="11">200</option>
                         </select>
                         <div className="input-group-append">
-                            <button className="btn btn-warning warning-btn-hover" for="joulesGroup">Shock</button>
+                            <button className="text-danger btn btn-warning warning-btn-hover" for="joulesGroup">Shock</button>
                         </div>
                     </div>
                 </div>
