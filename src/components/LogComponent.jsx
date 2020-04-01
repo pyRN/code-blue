@@ -1,38 +1,30 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 
-class LogComponent extends Component {
-    state = {  }
-    render() { 
-        return ( 
-            <div className="m-5">
-                <table className="table table-dark table-striped">
-                        <tbody>
-                            <tr>
-                                <td>Bob Franks</td>
-                                <td>MD</td>
-                                <td>ER</td>
-                                <td>Arrived</td>
-                                <td>1700</td>
-                            </tr>
-                            <tr>
-                                <td>Sally Jones</td>
-                                <td>RN</td>
-                                <td>ER</td>
-                                <td>Arrived</td>
-                                <td>1700</td>
-                            </tr>
-                            <tr>
-                                <td>Chuck Berry</td>
-                                <td>RT</td>
-                                <td>ER</td>
-                                <td>Arrived</td>
-                                <td>1700</td>
-                            </tr>
-                        </tbody>
-                    </table>
-            </div>
-        );
-    }
+const LogComponent = ({eventLog}) => {
+    const [events, setEventLog] = useState(eventLog)
+
+    return ( 
+        <div className="m-5">
+            <table className="table table-dark table-striped">
+                <thead>
+                    <tr>
+                        <th>Timestamp</th>
+                        <th>Event</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {events.map((events) => (
+                        <tr key={events.eventIndex}>
+                            <td>{events.eventTimestamp}</td>
+                            <td>{events.eventType}</td>
+                            <td>{events.eventDescription}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+        </div>
+    );
 }
 
 export default LogComponent;

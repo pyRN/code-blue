@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-//Components
+//Import Components
 import FooterComponent from './components/subcomponents/FooterComponent'
 import LogComponent from '../src/components/LogComponent'
 import MainComponent from '../src/components/MainComponent'
@@ -16,22 +16,21 @@ import TeamListComponent from '../src/components/TeamListComponent'
 
 
 const App = () => {
+  //States
+  const [eventLog, setEventLog] = useState([])
+  const [cprTimerStart, setCprTimerStart] = useState(false)
 
-  const [eventLog, setEventLog] = useState([
-    // {
-    //   eventTimestamp: new Date(),
-    //   eventType: 'Team Member Entered',
-    //   eventDescription: 'Jacob Mayeux RN Emergency Room'
-    // }
-  ])
-
+  //Methods
   const addEvent = newEvent => {
-    const newEventLog = [...eventLog, {newEvent}]
-    // setEventLog(newEventLog)
+    const addEvent = {
+      eventTimestamp: {newEvent}.newEvent.eventTimestamp,
+      eventType: {newEvent}.newEvent.eventType,
+      eventDescription: {newEvent}.newEvent.eventDescription,
+      eventIndex: eventLog.length 
+    }
+    const newEventLog = [...eventLog, addEvent]
+    setEventLog(newEventLog)
   }
-
-  // console.log(eventLog) 
-
 
   return (
     <div className="mainContainer">      
@@ -42,7 +41,7 @@ const App = () => {
         </div>
         <Route path="/" exact render={props => <MainComponent addNote={addEvent}/>}/>
         <Route path="/log" render={props => <LogComponent eventLog={eventLog}/>}/>
-        <Route path="/team" render={props => <TeamListComponent eventLog={eventLog}/>}/>
+        <Route path="/team" render={props => <TeamListComponent/>}/>
         <Route path="/procedures" render={props => <ProcedureListComponent/>}/>
         <Route path="/meds" render={props => <MedicationsListComponent/>}/>
         <Route path="/reference" render={props => <ReferenceComponent/>}/>
