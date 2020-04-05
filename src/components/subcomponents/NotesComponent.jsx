@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const NotesComponent = ({addNote}) => {
+const NotesComponent = ({addEvent}) => {
 
     const handleAddNote = event => {
         event.preventDefault();
@@ -9,9 +9,7 @@ const NotesComponent = ({addNote}) => {
 
         if(!sInputValue) return
 
-
-
-        addNote({
+        addEvent({
             eventTimestamp: `${currentTime.getHours()}:${currentTime.getMinutes()
             }:${currentTime.getSeconds()}:${currentTime.getMilliseconds()} - ${currentTime.getMonth() + 1}/${currentTime.getDate()}/${currentTime.getFullYear()}`,
             eventType: "ad hoc note",

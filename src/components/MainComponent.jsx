@@ -10,8 +10,7 @@ import RhythmComponent from './subcomponents/RhythmComponent'
 import VitalsComponent from './subcomponents/VitalsComponent'
 
 
-const MainComponent = ({addNote}) => {
-    const [cprTimer, setCprTimer] = useState();
+const MainComponent = ({addEvent}) => {
 
     return ( 
         <div className="m-4">
@@ -21,7 +20,7 @@ const MainComponent = ({addNote}) => {
             </div>
             <div className="row">
                 <DefibrillateComponent/>
-                <NotesComponent addNote={addNote}/>                    
+                <NotesComponent addEvent={addEvent}/>                    
             </div>
             <div className="row">
                 <EmergencyMedsComponent/>

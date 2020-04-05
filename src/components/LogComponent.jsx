@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const LogComponent = ({eventLog}) => {
-    const [events, setEventLog] = useState(eventLog)
+    const [events] = useState(eventLog)
 
     return ( 
         <div className="m-5">

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -18,18 +18,34 @@ import TeamListComponent from '../src/components/TeamListComponent'
 const App = () => {
   //States
   const [eventLog, setEventLog] = useState([])
-  const [cprTimerStart, setCprTimerStart] = useState(false)
+  const [cprTimer, setCprTimer] = useState(false)
+  const [resetCprTime, setResetCprTime] = useState(true)
+  const [codeTimer, setCodeTimer] = useState(false)
+  const [epiTimer, setEpiTimer] = useState(false)
+  const [resetEpiTime, setResetEpiTime] = useState(true)
 
   //Methods
   const addEvent = newEvent => {
+    /*Method used to add event to eventLog and update log view */
+    /*Every action made should pass through this method */
     const addEvent = {
       eventTimestamp: {newEvent}.newEvent.eventTimestamp,
       eventType: {newEvent}.newEvent.eventType,
       eventDescription: {newEvent}.newEvent.eventDescription,
       eventIndex: eventLog.length 
     }
-    const newEventLog = [...eventLog, addEvent]
-    setEventLog(newEventLog)
+    // const newEventLog = [...eventLog, addEvent]
+    setEventLog([...eventLog, addEvent])
+  }
+  
+  const patientArrived = startTimer => {
+    setCprTimer(startTimer)
+    setCodeTimer(startTimer)
+    setResetCprTime(false)
+  }
+
+  const changeEpiTimer = startTimer => {
+    setEpiTimer(startTimer)
   }
 
   return (
@@ -37,9 +53,9 @@ const App = () => {
       <Router>      
         <div className="static-top sticky-top">
           <NavBarComponent/>
-          <SecondNavBar/>
+          <SecondNavBar cprTimer={cprTimer} patientArrived={patientArrived} codeTimer={codeTimer} epiTimer={epiTimer} addEvent={addEvent} resetCprTimer={resetCprTime} resetEpiTimer={resetEpiTime}/>
         </div>
-        <Route path="/" exact render={props => <MainComponent addNote={addEvent}/>}/>
+        <Route path="/" exact render={props => <MainComponent addEvent={addEvent}/>}/>
         <Route path="/log" render={props => <LogComponent eventLog={eventLog}/>}/>
         <Route path="/team" render={props => <TeamListComponent/>}/>
         <Route path="/procedures" render={props => <ProcedureListComponent/>}/>
