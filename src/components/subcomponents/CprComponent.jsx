@@ -1,8 +1,39 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 
-const CprComponent = (props) => {
+const CprComponent = ({changeCprTimer, cprTimer, addEvent}) => {
 
-    const [cprTime, setCprTime] = useState(false);
+    //Methods
+    const handleStartBtnPress = () => {
+        if(!cprTimer){
+            let currentTime = new Date()
+            addEvent({
+                eventTimestamp: `${currentTime.getHours()}:${currentTime.getMinutes()
+                }:${currentTime.getSeconds()}:${currentTime.getMilliseconds()} - ${currentTime.getMonth() + 1}/${currentTime.getDate()}/${currentTime.getFullYear()}`,
+                eventType: 'CPR',
+                eventDescription: 'Start'
+            })
+            changeCprTimer(true)
+        } 
+    }
+
+    const handleStopBtnPress = () => {
+        if(cprTimer){
+            let currentTime = new Date()
+            addEvent({
+                eventTimestamp: `${currentTime.getHours()}:${currentTime.getMinutes()
+                }:${currentTime.getSeconds()}:${currentTime.getMilliseconds()} - ${currentTime.getMonth() + 1}/${currentTime.getDate()}/${currentTime.getFullYear()}`,
+                eventType: 'CPR',
+                eventDescription: 'Stop'
+            })
+            changeCprTimer(false)
+        }
+    }
+
+    const handlePulseCheck = () => {
+        console.log("here")
+    }
+
+    
     
     return ( 
         <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
@@ -13,19 +44,19 @@ const CprComponent = (props) => {
                 <div className="row">
                     <div className="col-sm">
                         <button className="text-light btn btn-success btn-outline-dark btn-block m-1 start-stop-btn-hover" 
-                        onClick={() => setCprTime(true)}>Start</button>
+                        onClick={handleStartBtnPress}>Start</button>
                     </div>
                     <div className="col-sm">
                         <button className="text-light btn btn-danger btn-outline-dark btn-block m-1 start-stop-btn-hover"
-                        onClick={() => setCprTime(false)}>Stop</button>
+                        onClick={handleStopBtnPress}>Stop</button>
                     </div>
                     <div className="col-sm">
-                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">Pulse Check</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" onClick={handlePulseCheck}>Pulse Check</button>
                     </div>
                 </div>      
                 <div className="row">
                     <div className="col-sm">
-                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">R.O.S.C</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" >R.O.S.C</button>
                     </div>
                     <div className="col-sm">
                         <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">T.O.D</button>

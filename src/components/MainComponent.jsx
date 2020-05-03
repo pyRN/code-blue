@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 //Components
 import CprComponent from './subcomponents/CprComponent'
@@ -9,13 +9,12 @@ import NotesComponent from './subcomponents/NotesComponent'
 import RhythmComponent from './subcomponents/RhythmComponent'
 import VitalsComponent from './subcomponents/VitalsComponent'
 
-
-const MainComponent = ({addEvent}) => {
+const MainComponent = ({addEvent, changeCprTimer, cprTimer}) => {
 
     return ( 
         <div className="m-4">
             <div className="row">   
-                <CprComponent/>
+                <CprComponent changeCprTimer={changeCprTimer} cprTimer={cprTimer} addEvent={addEvent}/>
                 <RhythmComponent/>
             </div>
             <div className="row">

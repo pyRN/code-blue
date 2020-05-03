@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import ClockComponent from './ClockComponent'
 import ShortTimerComponent from './ShortTimerComponent'
 import TimerComponent from './TimerComponent'
@@ -15,7 +15,7 @@ const SecondNavBar = ({ cprTimer, patientArrived, codeTimer, epiTimer, addEvent,
             eventTimestamp: `${currentTime.getHours()}:${currentTime.getMinutes()
             }:${currentTime.getSeconds()}:${currentTime.getMilliseconds()} - ${currentTime.getMonth() + 1}/${currentTime.getDate()}/${currentTime.getFullYear()}`,
             eventType: "PATIENT ARRIVED",
-            eventDescription: "Patient arrived to Emergency Room"
+            eventDescription: "Patient arrived to room"
         })
 
         document.getElementById("patientArrivedBtn").style.visibility = "hidden";

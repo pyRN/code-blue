@@ -14,7 +14,7 @@ const LogComponent = ({eventLog}) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {events.map((events) => (
+                    {events.slice(0).reverse().map((events) => (
                         <tr key={events.eventIndex}>
                             <td>{events.eventTimestamp}</td>
                             <td>{events.eventType}</td>
