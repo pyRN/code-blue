@@ -19,15 +19,15 @@ function CprComponent({changeCprTimer, cprTimer, addEvent}){
         backgroundColor: 'slateblue',
         border: "1px solid black"
     }
-    
-    const onButtonPress = (e) =>{
+
+    const handleOnClick = (e) =>{
 
         //TODO - This is a hot mess, needs to be simplified and cleaned up
         switch(e.target.id){
             case "ptArriveBtn":
                 addEvent("Arrival", "Patient Arrived")
                 changeCprTimer(true)
-                break;
+                break
             case "cprBtn":
                 if(cprTimer === null){
                     addEvent("Arrival", "Patient Arrived")
@@ -41,27 +41,27 @@ function CprComponent({changeCprTimer, cprTimer, addEvent}){
                     addEvent("CPR", "Stop")
                     changeCprTimer(false)
                 }
-                break;
+                break
             case "pulseCheckBtn":
                 addEvent("CPR Paused", "Pulse Check")
                 if(cprTimer){
                     changeCprTimer(false)
                 }
-                break;
+                break
             case "roscBtn":
                 addEvent("Code End", "ROSC")
                 if(cprTimer){
                     changeCprTimer(false)
                 }
-                break;
+                break
             case "todBtn":
                 addEvent("Code End", "T.O.D")
                 if(cprTimer){
                     changeCprTimer(false)
                 }
-                break;
+                break
             default:
-                break;
+                break
         }
     }
     
@@ -76,27 +76,25 @@ function CprComponent({changeCprTimer, cprTimer, addEvent}){
                     cprTimer === null ?
                         <div className="col-sm">
                             <button className="text-light btn btn-outline-dark btn-block m-1 start-stop-btn-hover" 
-                            id="ptArriveBtn" onClick={onButtonPress} style={oPtArrButtonStyle}>Pt Arrived</button>
+                            id="ptArriveBtn" onClick={handleOnClick} style={oPtArrButtonStyle}>Pt Arrived</button>
                         </div>
                         :
                         null
                     }
-                </div>
-                <div className="row">
                     <div className="col-sm">
                         <button className="text-light btn btn-outline-dark btn-block m-1 start-stop-btn-hover" 
-                        id="cprBtn" onClick={onButtonPress} style={oCprButtonStyle}>{sCprButtonText}</button>
+                        id="cprBtn" onClick={handleOnClick} style={oCprButtonStyle}>{sCprButtonText}</button>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-sm">
-                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" id="pulseCheckBtn" onClick={onButtonPress}>Pulse Check</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" id="pulseCheckBtn" onClick={handleOnClick}>Pulse Check</button>
                     </div>
                     <div className="col-sm">
-                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" id="roscBtn" onClick={onButtonPress}>R.O.S.C</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" id="roscBtn" onClick={handleOnClick}>R.O.S.C</button>
                     </div>
                     <div className="col-sm">
-                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" id="todBtn" onClick={onButtonPress}>T.O.D</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" id="todBtn" onClick={handleOnClick}>T.O.D</button>
                     </div>
                 </div>  
                 <div className="row m-2">
