@@ -1,8 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const LogComponent = ({eventLog}) => {
-    const [events] = useState(eventLog)
-
+function LogComponent({eventLog}){
     return ( 
         <div className="m-5">
             <table className="table table-dark table-striped">
@@ -14,13 +12,19 @@ const LogComponent = ({eventLog}) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {events.slice(0).reverse().map((events) => (
+                {
+                    eventLog && eventLog.length ? 
+                        
+                    eventLog.reverse().map((events) => (
                         <tr key={events.eventIndex}>
                             <td>{events.eventTimestamp}</td>
                             <td>{events.eventType}</td>
                             <td>{events.eventDescription}</td>
                         </tr>
-                    ))}
+                    ))
+                    :
+                    null
+                }
                 </tbody>
             </table>
         </div>
