@@ -34,8 +34,9 @@ function EmergencyProcComponent({addEvent}){
             <div className="card-header bg-secondary">
                 <h5 className="m-auto">Emergency Procedures</h5>
             </div>
+            
             <div className="card-body">
-                <div className="col-sm">
+                <div>
                     <div className="input-group border-dark rounded">
                         <select className="custom-select" id="emergencyProcsGroup">
                             <option value="0">Emergency Procedures</option>
