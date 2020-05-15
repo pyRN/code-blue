@@ -4,7 +4,7 @@ function QuickLogComponent({eventLog}){
     return(
         <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
             <div className="card-header bg-secondary">
-                <h5 className="m-auto">CPR</h5>
+                <h5 className="m-auto">Quick Log</h5>
             </div>
             <div className="card-body">
                 <div className="row">
