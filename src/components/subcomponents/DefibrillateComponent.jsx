@@ -1,7 +1,7 @@
 import React from 'react';   
 
 function DefibrillateComponent({addEvent}){
-    const handleAddNote = (e) =>{
+    const handleOnClick = (e) =>{
         e.preventDefault();
         let sInputValue = document.getElementById("joulesGroup").value
 
@@ -29,7 +29,7 @@ function DefibrillateComponent({addEvent}){
                     <option value="200">200</option>
                 </select>
                 <div className="input-group-append">
-                    <button className="text-danger btn btn-warning warning-btn-hover" for="joulesGroup" onClick={handleAddNote}>Shock</button>
+                    <button className="text-danger btn btn-warning warning-btn-hover" for="joulesGroup" onClick={handleOnClick}>Shock</button>
                 </div>
             </div>
         </div>

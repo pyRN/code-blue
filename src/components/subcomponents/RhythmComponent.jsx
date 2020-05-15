@@ -1,7 +1,7 @@
 import React from 'react';   
 
 function RhythmComponent({addEvent}){
-    const handleAddNote = (e) =>{
+    const handleOnClick = (e) =>{
         e.preventDefault();
         let sInputValue = document.getElementById("rhythmGroup").value
 
@@ -32,7 +32,7 @@ function RhythmComponent({addEvent}){
                     <option value="2nd&#176; AV Block Type-2">2nd&#176; AV Block Type-2</option>
                 </select>
                 <div className="input-group-append">
-                    <button className="text-light btn btn-danger start-stop-btn-hover" for="rhythmGroup" onClick={handleAddNote}>Add</button>
+                    <button className="text-light btn btn-danger start-stop-btn-hover" for="rhythmGroup" onClick={handleOnClick}>Add</button>
                 </div>
             </div>
         </div>
