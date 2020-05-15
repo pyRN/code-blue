@@ -18,7 +18,7 @@ import TeamListComponent from '../src/components/TeamListComponent'
 const App = () => {
     //States
     const [eventLog, setEventLog] = useState([])
-    const [cprTimer, setCprTimer] = useState(false)
+    const [cprTimer, setCprTimer] = useState(null)
     const [resetCprTime, setResetCprTime] = useState(true)
     const [codeTimer, setCodeTimer] = useState(false)
     const [epiTimer, setEpiTimer] = useState(false)
