@@ -1,40 +1,32 @@
-import React, { Component } from 'react'
+import React from 'react';   
 
-class RhythmComponent extends Component {
-    state = {  }
-    render() { 
-        return ( 
-            <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
-                <div className="card-header bg-secondary">
-                    <h5 className="m-auto">Rhythm</h5>
+function RhythmComponent(){
+    return ( 
+        <div className="col-sm">
+            <div className="input-group border-dark rounded mb-2">
+                <select className="custom-select" id="rhythmGroup">
+                    <option selected>Heart Rhythm</option>
+                    <option value="1">Asystole</option>
+                    <option value="2">A-Fib</option>
+                    <option value="3">A-Flutter</option>
+                    <option value="4">Complete Heart Block</option>
+                    <option value="5">Mono V-Tach</option>
+                    <option value="6">PEA</option>
+                    <option value="7">Poly V-Tach</option>
+                    <option value="8">Pulseless V-Tach</option>
+                    <option value="9">SVT</option>
+                    <option value="10">Torsades</option>
+                    <option value="11">V-Fib</option>
+                    <option value="12">1st&#176; AV Block</option>
+                    <option value="13">2nd&#176; AV Block Type-1</option>
+                    <option value="14">2nd&#176; AV Block Type-2</option>
+                </select>
+                <div className="input-group-append">
+                    <button className="text-light btn btn-danger start-stop-btn-hover" for="rhythmGroup">Add</button>
                 </div>
-                <div className="card-body">
-                    <div className="row">
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">Asystole</button>
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">Pulseless V-Tach</button>
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">V-Fib</button>
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">PEA</button>
-                    </div>
-                    <div className="row">
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">1st&#176; AV Block</button>
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">2nd&#176; AV Block Type-1</button>
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">2nd&#176; AV Block Type-2</button>
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">Complete Heart Block</button>
-                    </div>
-                    <div className="row">
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">SVT</button>
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">A-Flutter</button>
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">A-Fib</button>
-                    </div>
-                    <div className="row">
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">Mono V-Tach</button>
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">Poly V-Tach</button>
-                        <button className="col-sm text-Primary btn btn-outline-primary btn-block m-1 btn-background">Torsades</button>
-                    </div>
-                </div>                        
             </div>
-        );
-    }
+        </div>
+    );
 }
- 
+
 export default RhythmComponent;
