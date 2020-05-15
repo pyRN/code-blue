@@ -3,21 +3,12 @@ import ClockComponent from './ClockComponent'
 import ShortTimerComponent from './ShortTimerComponent'
 import TimerComponent from './TimerComponent'
 
-
-
-const SecondNavBar = ({ cprTimer, patientArrived, codeTimer, epiTimer, addEvent, resetCprTimer, resetEpiTimer }) => {
+function SecondNavBar({ cprTimer, patientArrived, codeTimer, epiTimer, addEvent, resetCprTimer, resetEpiTimer }){
     //Methods
     const patientArrivedBtnPress = () => {
         //Start Code and CPR timers once patient has arrived
-        let currentTime = new Date();
         patientArrived(true)
-        addEvent({
-            eventTimestamp: `${currentTime.getHours()}:${currentTime.getMinutes()
-            }:${currentTime.getSeconds()}:${currentTime.getMilliseconds()} - ${currentTime.getMonth() + 1}/${currentTime.getDate()}/${currentTime.getFullYear()}`,
-            eventType: "PATIENT ARRIVED",
-            eventDescription: "Patient arrived to room"
-        })
-
+        addEvent("Patient Arrived", "Patient arrived to room")
         document.getElementById("patientArrivedBtn").style.visibility = "hidden";
     }
 
