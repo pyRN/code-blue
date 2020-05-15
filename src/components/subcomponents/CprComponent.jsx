@@ -1,39 +1,49 @@
 import React from 'react'
 
-const CprComponent = ({changeCprTimer, cprTimer, addEvent}) => {
+//Components
+import DefibrillateComponent from './DefibrillateComponent'
+import NotesComponent from './NotesComponent'
+import RhythmComponent from './RhythmComponent'
 
-    //Methods
-    const handleStartBtnPress = () => {
-        if(!cprTimer){
-            let currentTime = new Date()
-            addEvent({
-                eventTimestamp: `${currentTime.getHours()}:${currentTime.getMinutes()
-                }:${currentTime.getSeconds()}:${currentTime.getMilliseconds()} - ${currentTime.getMonth() + 1}/${currentTime.getDate()}/${currentTime.getFullYear()}`,
-                eventType: 'CPR',
-                eventDescription: 'Start'
-            })
-            changeCprTimer(true)
-        } 
-    }
+function CprComponent({changeCprTimer, cprTimer, addEvent}){
+    const onButtonPress = (e) =>{
 
-    const handleStopBtnPress = () => {
-        if(cprTimer){
-            let currentTime = new Date()
-            addEvent({
-                eventTimestamp: `${currentTime.getHours()}:${currentTime.getMinutes()
-                }:${currentTime.getSeconds()}:${currentTime.getMilliseconds()} - ${currentTime.getMonth() + 1}/${currentTime.getDate()}/${currentTime.getFullYear()}`,
-                eventType: 'CPR',
-                eventDescription: 'Stop'
-            })
-            changeCprTimer(false)
+        //TODO - This is a hot mess, needs to be simplified and cleaned up
+        switch(e.target.id){
+            case "cprStartBtn":
+                if(!cprTimer){
+                    addEvent("CPR", "Start")
+                    changeCprTimer(true)
+                } 
+                break;
+            case "cprStopBtn":
+                if(cprTimer){
+                    addEvent("CPR", "Stop")
+                    changeCprTimer(false)
+                }
+                break;
+            case "pulseCheckBtn":
+                addEvent("CPR Paused", "Pulse Check")
+                if(cprTimer){
+                    changeCprTimer(false)
+                }
+                break;
+            case "roscBtn":
+                addEvent("Code End", "ROSC")
+                if(cprTimer){
+                    changeCprTimer(false)
+                }
+                break;
+            case "todBtn":
+                addEvent("Code End", "T.O.D")
+                if(cprTimer){
+                    changeCprTimer(false)
+                }
+                break;
+            default:
+                break;
         }
     }
-
-    const handlePulseCheck = () => {
-        console.log("here")
-    }
-
-    
     
     return ( 
         <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
@@ -44,24 +54,32 @@ const CprComponent = ({changeCprTimer, cprTimer, addEvent}) => {
                 <div className="row">
                     <div className="col-sm">
                         <button className="text-light btn btn-success btn-outline-dark btn-block m-1 start-stop-btn-hover" 
-                        onClick={handleStartBtnPress}>Start</button>
+                        id="cprStartBtn" onClick={onButtonPress}>Start</button>
                     </div>
                     <div className="col-sm">
                         <button className="text-light btn btn-danger btn-outline-dark btn-block m-1 start-stop-btn-hover"
-                        onClick={handleStopBtnPress}>Stop</button>
+                        id="cprStopBtn" onClick={onButtonPress}>Stop</button>
                     </div>
-                    <div className="col-sm">
-                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" onClick={handlePulseCheck}>Pulse Check</button>
-                    </div>
+                    
                 </div>      
                 <div className="row">
                     <div className="col-sm">
-                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" >R.O.S.C</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" id="pulseCheckBtn" onClick={onButtonPress}>Pulse Check</button>
                     </div>
                     <div className="col-sm">
-                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background">T.O.D</button>
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" id="roscBtn" onClick={onButtonPress}>R.O.S.C</button>
                     </div>
-                </div>                         
+                    <div className="col-sm">
+                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" id="todBtn" onClick={onButtonPress}>T.O.D</button>
+                    </div>
+                </div>  
+                <div className="row m-2">
+                    <DefibrillateComponent addEvent={addEvent}/>
+                    <RhythmComponent addEvent={addEvent}/>
+                </div> 
+                <div className="row m-2">
+                    <NotesComponent addEvent={addEvent}/>           
+                </div>        
             </div>                        
         </div>
     );

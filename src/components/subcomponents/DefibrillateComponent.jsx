@@ -12,7 +12,7 @@ function DefibrillateComponent({addEvent}){
     }
 
     return ( 
-        <div>
+        <div className="col-sm">
             <div className="input-group border-dark rounded">
                 <select className="custom-select" id="joulesGroup">
                     <option value="0">Joules</option>

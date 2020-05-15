@@ -16,7 +16,7 @@ const MainComponent = ({addEvent, changeCprTimer, cprTimer}) => {
                 <EmergencyMedsComponent/>
             </div>
             <div className="row">
-                <NotesComponent addEvent={addEvent}/> 
+                {/* <NotesComponent addEvent={addEvent}/>  */}
                 <EmergencyProcComponent/>   
                 <VitalsComponent/>
             </div>  

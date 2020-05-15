@@ -26,7 +26,7 @@ class TeamListComponent extends Component {
                             <option value="5">Radiology</option>
                         </select>
                         <input type="time" className="form-control"/>
-                        <div class="input-group-append">
+                        <div className="input-group-append">
                             <button className="text-primary btn btn-background btn-background-hover" id="basic-addon2">Now</button>
                         </div>
                     </div>

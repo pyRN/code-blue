@@ -8,7 +8,7 @@ function NotesComponent({addEvent}){
 
         if(!sInputValue) return
         
-        addEvent('ad hoc note', sInputValue)
+        addEvent('Ad Hoc Note', sInputValue)
         document.getElementById("notesInput").value = ''
     }
 
