@@ -1,13 +1,13 @@
 import React from 'react';   
 
 function RhythmComponent({addEvent}){
-    function handleAddNote(e){
+    const handleAddNote = (e) =>{
         e.preventDefault();
         let sInputValue = document.getElementById("rhythmGroup").value
 
         if(sInputValue === "0") return
         
-        addEvent('Heart Rhythm', sInputValue)
+        addEvent('Heart Rhythm', `Current heart rhythm: ${sInputValue}`)
         document.getElementById("rhythmGroup").value = 0
     }
 
@@ -15,7 +15,7 @@ function RhythmComponent({addEvent}){
         <div>
             <div className="input-group border-dark rounded">
                 <select className="custom-select" id="rhythmGroup">
-                    <option selected value="0">Heart Rhythm</option>
+                    <option value="0">Heart Rhythm</option>
                     <option value="Asystole">Asystole</option>
                     <option value="A-Fib">A-Fib</option>
                     <option value="Flutter">A-Flutter</option>
