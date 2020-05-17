@@ -1,10 +1,5 @@
 import React from 'react'
 
-//Components
-import DefibrillateComponent from './DefibrillateComponent'
-import NotesComponent from './NotesComponent'
-import RhythmComponent from './RhythmComponent'
-
 function CprComponent({changeCprTimer, cprTimer, addEvent}){
     let sCprButtonText = cprTimer ? 'Stop CPR' : 'Start CPR'
 
@@ -66,7 +61,7 @@ function CprComponent({changeCprTimer, cprTimer, addEvent}){
     }
     
     return ( 
-        <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
+        <div>
             <div className="card-header bg-secondary">
                 <h5 className="m-auto">CPR</h5>
             </div>
@@ -86,26 +81,6 @@ function CprComponent({changeCprTimer, cprTimer, addEvent}){
                         id="cprBtn" onClick={handleOnClick} style={oCprButtonStyle}>{sCprButtonText}</button>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-sm">
-                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" id="pulseCheckBtn" onClick={handleOnClick}>Pulse Check</button>
-                    </div>
-                    <div className="col-sm">
-                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" id="roscBtn" onClick={handleOnClick}>R.O.S.C</button>
-                    </div>
-                    <div className="col-sm">
-                        <button className="text-Primary btn btn-outline-primary btn-block m-1 btn-background" id="todBtn" onClick={handleOnClick}>T.O.D</button>
-                    </div>
-                </div>  
-                <div className="row m-2">
-                    <DefibrillateComponent addEvent={addEvent}/>
-                </div> 
-                <div className="row m-2">
-                    <RhythmComponent addEvent={addEvent}/>         
-                </div>  
-                <div className="row m-2">
-                    <NotesComponent addEvent={addEvent}/>           
-                </div>        
             </div>                        
         </div>
     );

@@ -23,6 +23,7 @@ const App = () => {
     const [codeTimer, setCodeTimer] = useState(false)
     const [epiTimer, setEpiTimer] = useState(false)
     const [resetEpiTime, setResetEpiTime] = useState(true)
+    const [isPatientArrived, setIsPatientArrived] = useState(false)
 
     //Methods
     const addEvent = (eventType, eventDescription) => {
@@ -70,7 +71,7 @@ const App = () => {
                     resetCprTimer={resetCprTime} 
                     resetEpiTimer={resetEpiTime}/>
                 </div>
-                <Route path="/" exact render={props => <MainComponent addEvent={addEvent} changeCprTimer={changeCprTimer} cprTimer={cprTimer}/>}/>
+                <Route path="/" exact render={props => <MainComponent addEvent={addEvent} changeCprTimer={changeCprTimer} cprTimer={cprTimer} eventLog={eventLog}/>}/>
                 <Route path="/log" render={props => <LogComponent eventLog={eventLog}/>}/>
                 <Route path="/team" render={props => <TeamListComponent/>}/>
                 <Route path="/procedures" render={props => <ProcedureListComponent/>}/>
