@@ -7,6 +7,7 @@ function EmergencyMedsComponent({addEvent, cprTimer, isPatientArrived}){
         let sInputValue = document.getElementById("emergencyMedsGroup").value
 
         if(sInputValue === "0") return
+        if(!isPatientArrived)   return
 
         switch(sInputValue){
             case "amiodarone150Btn":

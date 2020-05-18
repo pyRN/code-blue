@@ -1,14 +1,27 @@
+/*
+    TODO:
+    1)Stop timers if either button is clickecd
+    2)Add additional information to log once buttons clicked
+    3)Reset CPR button [ROSC can go back into a code / spontaneous ROSC can occur after TOD called]
+ */
+
 import React from 'react';
 
 function CodeEndComponent({addEvent, isPatientArrived}){
     const handleOnClick = (e) =>{
         e.preventDefault();
-        let sInputValue = document.getElementById("rhythmGroup").value
+        if(!isPatientArrived)   return
 
-        if(sInputValue === "0") return
-        
-        addEvent('Heart Rhythm', `Current heart rhythm: ${sInputValue}`)
-        document.getElementById("rhythmGroup").value = 0
+        switch(e.target.id){
+            case "roscBtn":
+                addEvent('Code End', `R.O.S.C established`)
+                break
+            case "todBtn":
+                addEvent('Code End', `T.O.D - ${new Date().toLocaleTimeString('en-US')}`)
+                break
+            default:
+                break
+        }
     }
 
     return(

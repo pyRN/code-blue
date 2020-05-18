@@ -6,6 +6,7 @@ function RhythmComponent({addEvent, isPatientArrived}){
         let sInputValue = document.getElementById("rhythmGroup").value
 
         if(sInputValue === "0") return
+        if(!isPatientArrived)   return
         
         addEvent('Heart Rhythm', `Current heart rhythm: ${sInputValue}`)
         document.getElementById("rhythmGroup").value = 0

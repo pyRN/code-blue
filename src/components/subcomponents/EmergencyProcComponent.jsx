@@ -6,6 +6,7 @@ function EmergencyProcComponent({addEvent, isPatientArrived}){
         let sInputValue = document.getElementById("emergencyProcsGroup").value
 
         if(sInputValue === "0") return
+        if(!isPatientArrived)   return
 
         switch(sInputValue){
             case "artLineProc":

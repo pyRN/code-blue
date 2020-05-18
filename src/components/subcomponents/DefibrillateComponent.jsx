@@ -6,6 +6,7 @@ function DefibrillateComponent({addEvent, isPatientArrived}){
         let sInputValue = document.getElementById("joulesGroup").value
 
         if(sInputValue === "0") return
+        if(!isPatientArrived)   return
         
         addEvent('Defibrillate', `Patient defibrillated at ${sInputValue} joules`)
         document.getElementById("joulesGroup").value = 0
