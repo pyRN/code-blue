@@ -28,7 +28,7 @@ const MainComponent = ({addEvent, changeCprTimer, cprTimer, eventLog}) => {
                     <EmergencyProcComponent addEvent={addEvent} />  
                     <NotesComponent addEvent={addEvent}/> 
                 </div>
-                <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">"
+                <div className="col-sm card m-1 p-4 border border-dark bg-dark rounded">
                     <VitalsComponent/>
                     <CodeEndComponent addEvent={addEvent}/>
                 </div>

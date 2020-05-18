@@ -8,7 +8,7 @@ function VitalsComponent(){
                 <h5 className="m-auto">Vitals</h5>
             </div>
             <div className="card-body">
-                <div className="row">
+                <div className>
                     <VitalComponent/>   
                 </div>                         
             </div>
