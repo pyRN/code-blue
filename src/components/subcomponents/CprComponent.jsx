@@ -1,6 +1,6 @@
 import React from 'react'
 
-function CprComponent({changeCprTimer, cprTimer, addEvent}){
+function CprComponent({changeCprTimer, cprTimer, addEvent, isPatientArrived, patientArrived}){
     let sCprButtonText = cprTimer ? 'Stop CPR' : 'Start CPR'
 
     //Styles
@@ -20,38 +20,23 @@ function CprComponent({changeCprTimer, cprTimer, addEvent}){
         //TODO - This is a hot mess, needs to be simplified and cleaned up
         switch(e.target.id){
             case "ptArriveBtn":
-                addEvent("Arrival", "Patient Arrived")
+
+                patientArrived(true)
+                addEvent("Arrival", "Patient Arrived, CPR In Progress")
                 changeCprTimer(true)
                 break
             case "cprBtn":
-                if(cprTimer === null){
-                    addEvent("Arrival", "Patient Arrived")
+                if(!isPatientArrived){          //IF CPR button is pressed first versus patient arrived 
+                    patientArrived(true)
+                    addEvent("Arrival", "Patient Arrived, CPR In Progress")
                     changeCprTimer(true)
                 }
-                else if(!cprTimer){
+                else if(!cprTimer){            
                     addEvent("CPR", "Start")
                     changeCprTimer(true)
                 } 
                 else{
                     addEvent("CPR", "Stop")
-                    changeCprTimer(false)
-                }
-                break
-            case "pulseCheckBtn":
-                addEvent("CPR Paused", "Pulse Check")
-                if(cprTimer){
-                    changeCprTimer(false)
-                }
-                break
-            case "roscBtn":
-                addEvent("Code End", "ROSC")
-                if(cprTimer){
-                    changeCprTimer(false)
-                }
-                break
-            case "todBtn":
-                addEvent("Code End", "T.O.D")
-                if(cprTimer){
                     changeCprTimer(false)
                 }
                 break
@@ -68,13 +53,13 @@ function CprComponent({changeCprTimer, cprTimer, addEvent}){
             <div className="card-body">
                 <div className="row">
                     {
-                    cprTimer === null ?
-                        <div className="col-sm">
-                            <button className="text-light btn btn-outline-dark btn-block m-1 start-stop-btn-hover" 
-                            id="ptArriveBtn" onClick={handleOnClick} style={oPtArrButtonStyle}>Pt Arrived</button>
-                        </div>
-                        :
-                        null
+                        cprTimer === null ?
+                            <div className="col-sm">
+                                <button className="text-light btn btn-outline-dark btn-block m-1 start-stop-btn-hover" 
+                                id="ptArriveBtn" onClick={handleOnClick} style={oPtArrButtonStyle}>Pt Arrived</button>
+                            </div>
+                            :
+                            null
                     }
                     <div className="col-sm">
                         <button className="text-light btn btn-outline-dark btn-block m-1 start-stop-btn-hover" 

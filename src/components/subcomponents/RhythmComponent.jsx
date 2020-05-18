@@ -1,6 +1,6 @@
 import React from 'react';   
 
-function RhythmComponent({addEvent}){
+function RhythmComponent({addEvent, isPatientArrived}){
     const handleOnClick = (e) =>{
         e.preventDefault();
         let sInputValue = document.getElementById("rhythmGroup").value

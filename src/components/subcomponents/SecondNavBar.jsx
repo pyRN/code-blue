@@ -3,7 +3,7 @@ import ClockComponent from './ClockComponent'
 import ShortTimerComponent from './ShortTimerComponent'
 import TimerComponent from './TimerComponent'
 
-function SecondNavBar({ cprTimer, patientArrived, codeTimer, epiTimer, addEvent, resetCprTimer, resetEpiTimer }){
+function SecondNavBar({ cprTimer, codeTimer, epiTimer, addEvent, resetCprTimer, resetEpiTimer }){
     return ( 
         <nav className="navbar navbar-expand-lg navbar-dark bg-primary border-bottom border-dark">
             <div className="collapse navbar-collapse" id="navbarResponsive"> 

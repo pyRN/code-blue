@@ -1,6 +1,6 @@
 import React from 'react'
 
-function EmergencyProcComponent({addEvent}){
+function EmergencyProcComponent({addEvent, isPatientArrived}){
     const handleOnClick = (e) =>{
         e.preventDefault();
         let sInputValue = document.getElementById("emergencyProcsGroup").value

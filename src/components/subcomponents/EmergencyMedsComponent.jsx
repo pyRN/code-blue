@@ -1,6 +1,6 @@
 import React from 'react'
 
-function EmergencyMedsComponent({addEvent, cprTimer}){
+function EmergencyMedsComponent({addEvent, cprTimer, isPatientArrived}){
 
     const handleOnClick = (e) =>{
         e.preventDefault();

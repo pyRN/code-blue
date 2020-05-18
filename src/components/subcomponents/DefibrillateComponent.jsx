@@ -1,6 +1,6 @@
 import React from 'react';   
 
-function DefibrillateComponent({addEvent}){
+function DefibrillateComponent({addEvent, isPatientArrived}){
     const handleOnClick = (e) =>{
         e.preventDefault();
         let sInputValue = document.getElementById("joulesGroup").value

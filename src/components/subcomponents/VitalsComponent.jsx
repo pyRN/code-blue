@@ -1,7 +1,7 @@
 import React from 'react'
 import VitalComponent from './VitalComponent'
 
-function VitalsComponent(){
+function VitalsComponent({isPatientArrived}){
     return ( 
         <div>
             <div className="card-header bg-secondary">
@@ -9,7 +9,7 @@ function VitalsComponent(){
             </div>
             <div className="card-body">
                 <div className>
-                    <VitalComponent/>   
+                    <VitalComponent isPatientArrived={isPatientArrived}/>   
                 </div>                         
             </div>
         </div>

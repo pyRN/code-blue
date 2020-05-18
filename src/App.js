@@ -28,6 +28,10 @@ const App = () => {
     //Methods
     const addEvent = (eventType, eventDescription) => {
         /* Method used to add event to eventLog and update log view - Every action made should pass through this method */
+        // if(eventType === "Arrival"){
+        //     setIsPatientArrived(true);
+        // }
+
         const addEvent = {
             eventTimestamp: new Date().toString(),
             eventType: eventType,
@@ -38,10 +42,8 @@ const App = () => {
         setEventLog([...eventLog, addEvent])
     }
 
-    const patientArrived = startTimer => {
-        setCprTimer(startTimer)
-        setCodeTimer(startTimer)
-        setResetCprTime(false)
+    const patientArrived = isArrived => {
+        setIsPatientArrived(true)
     }
 
     const changeCprTimer = startTimer => {
@@ -64,14 +66,21 @@ const App = () => {
                 <NavBarComponent/>
                 <SecondNavBar 
                     cprTimer={cprTimer} 
-                    patientArrived={patientArrived} 
                     codeTimer={codeTimer} 
                     epiTimer={epiTimer} 
                     addEvent={addEvent} 
                     resetCprTimer={resetCprTime} 
                     resetEpiTimer={resetEpiTime}/>
                 </div>
-                <Route path="/" exact render={props => <MainComponent addEvent={addEvent} changeCprTimer={changeCprTimer} cprTimer={cprTimer} eventLog={eventLog}/>}/>
+                <Route path="/" exact render={props => 
+                    <MainComponent 
+                        addEvent={addEvent} 
+                        changeCprTimer={changeCprTimer} 
+                        cprTimer={cprTimer} 
+                        eventLog={eventLog} 
+                        isPatientArrived={isPatientArrived}
+                        patientArrived={patientArrived}/>
+                    }/>
                 <Route path="/log" render={props => <LogComponent eventLog={eventLog}/>}/>
                 <Route path="/team" render={props => <TeamListComponent/>}/>
                 <Route path="/procedures" render={props => <ProcedureListComponent/>}/>
